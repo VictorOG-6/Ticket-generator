@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Alatsi&family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+@import "tailwindcss";
+
+@font-face {
+  font-family: "JejuMyeongjo";
+  src: url("/fonts/JejuMyeongjo-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+  --font-road-rage: "Road Rage", serif;
+  --font-jeju: "JejuMyeongjo", sans-serif;
+  --font-alatsi: "Alatsi", serif;
+  --color-primary-bg: #02191d;
+  --color-primary-border: #197686;
+  --color-secondary-font-color: #0a0c11;
+  --color-grey: #b3b3b3;
+  --breakpoint-xs: 390px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-chromebook: 1200px;
+  --breakpoint-3xl: 120rem;
+  --color-card-gradient:
+    103.64% 57.39% at 14.02% 32.06%, rgba(36, 160, 181, 0.2) 0%,
+    rgba(36, 160, 181, 0) 100%;
+}
+
+body {
+  font-family: var(--font-roboto);
+  box-sizing: border-box;
+  color: white;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid transparent;
+  color: var(--color-secondary-font-color);
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 16px 24px;
+  height: 52px;
+  line-height: 1.25;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: #24a0b5;
+    border-color: #d9d9d9;
+    color: #d9d9d9;
+  }
+}
+
+.primary-btn {
+  font-family: var(--font-jeju);
+  background-color: #24a0b5;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border-color: #24a0b5;
+    background-color: transparent;
+    color: #24a0b5;
+  }
+}
+
+.secondary-btn {
+  font-family: var(--font-jeju);
+  background-color: transparent;
+  border: 1px solid #24a0b5;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #24a0b5;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border-color: transparent;
+    background-color: #24a0b5;
+    color: white;
+  }
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.small-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fafafa;
+  font-weight: 400;
+}
+
+.blob {
+  width: 800px;
+  height: 500px;
+  position: fixed;
+  bottom: -300px;
+  background: linear-gradient(
+    to bottom,
+    rgb(138, 218, 224) 5%,
+    rgb(138, 218, 224) 0%
+  );
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  filter: blur(145px);
+  mix-blend-mode: hard-light;
+  opacity: 40%;
+}
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(240 10% 3.9%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(240 10% 3.9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(240 10% 3.9%);
+  --primary: hsl(240 5.9% 10%);
+  --primary-foreground: hsl(0 0% 98%);
+  --secondary: hsl(240 4.8% 95.9%);
+  --secondary-foreground: hsl(240 5.9% 10%);
+  --muted: hsl(240 4.8% 95.9%);
+  --muted-foreground: hsl(240 3.8% 46.1%);
+  --accent: hsl(240 4.8% 95.9%);
+  --accent-foreground: hsl(240 5.9% 10%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(240 5.9% 90%);
+  --input: hsl(240 5.9% 90%);
+  --ring: hsl(240 10% 3.9%);
+  --chart-1: hsl(12 76% 61%);
+  --chart-2: hsl(173 58% 39%);
+  --chart-3: hsl(197 37% 24%);
+  --chart-4: hsl(43 74% 66%);
+  --chart-5: hsl(27 87% 67%);
+  --radius: 0.6rem;
+}
+
+.dark {
+  --background: hsl(240 10% 3.9%);
+  --foreground: hsl(0 0% 98%);
+  --card: hsl(240 10% 3.9%);
+  --card-foreground: hsl(0 0% 98%);
+  --popover: hsl(240 10% 3.9%);
+  --popover-foreground: hsl(0 0% 98%);
+  --primary: hsl(0 0% 98%);
+  --primary-foreground: hsl(240 5.9% 10%);
+  --secondary: hsl(240 3.7% 15.9%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --muted: hsl(240 3.7% 15.9%);
+  --muted-foreground: hsl(240 5% 64.9%);
+  --accent: hsl(240 3.7% 15.9%);
+  --accent-foreground: hsl(0 0% 98%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(240 3.7% 15.9%);
+  --input: hsl(240 3.7% 15.9%);
+  --ring: hsl(240 4.9% 83.9%);
+  --chart-1: hsl(220 70% 50%);
+  --chart-2: hsl(160 60% 45%);
+  --chart-3: hsl(30 80% 55%);
+  --chart-4: hsl(280 65% 60%);
+  --chart-5: hsl(340 75% 55%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@media screen and (max-width: theme(--breakpoint-md)) {
+  h2 {
+    font-size: 24px;
+  }
+}
