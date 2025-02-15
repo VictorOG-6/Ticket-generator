@@ -10,20 +10,13 @@ This project was bootstrapped with Vite and includes Cloudinary configuration fo
 
 ## Getting Started
 
-1. First, create a new Vite project:
-
-```bash
-npm create vite@latest my-react-app -- --template react
-cd my-react-app
-```
-
-2. Install dependencies:
+1. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. Configure Environment Variables:
+2. Configure Environment Variables:
 
 Create a `.env` file in the root directory and add your Cloudinary credentials:
 
@@ -32,7 +25,7 @@ VITE_CLOUDINARY_CLOUD_NAME=your_cloud_name
 VITE_CLOUDINARY_UPLOAD_PRESET=your_upload_preset
 ```
 
-4. Start the development server:
+3. Start the development server:
 
 ```bash
 npm run dev
